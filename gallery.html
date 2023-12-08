@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+        <link rel="stylesheet" href="css/gallery.css">
+    </head>
+
+    <body>
+        <header class="heading">
+            <nav class="nav-background">
+                <h2 class="art">Art<span class="title-gallery">Gallery</span></h2>
+                <div class="nav-item">
+                    <span><a href="index.html">Home</a></span>
+                    <span><a href>Contact</a></span>
+                    <span><a href>About</a></span>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero-section">
+            <div class="flex-container">
+                <div class="bubbles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="grid" id="artGrid">
+                    <!-- The template node for the artwork card -->
+                    <template id="artCardTemplate">
+                        <div class="over-card">
+                            <div class="front">
+                                <div class="mid-card">
+                                    <img src alt>
+                                </div>
+                                <div class="text-card">
+                                    <div class="heading">
+                                        <h3></h3>
+                                        <footer>Ownership @</footer>
+                                    </div>
+                                    <div class="button-detail">
+                                        <a onclick="flipCard(this)">See
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="details">
+                                    <p><strong>Art ID:</strong> <span
+                                            class="art-id"></span></p>
+                                    <p><strong>Description:</strong> <span
+                                            class="art-description"></span></p>
+                                    <!-- Add more properties as needed -->
+                                    <a onclick="flipCard(this)">Close</a>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+            </div>
+
+        </section>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

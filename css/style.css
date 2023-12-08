@@ -1,0 +1,183 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #ffb534;
+  --textColor: #092635;
+  --textWhite: #eef5ff;
+  --bubbles: #4fc3dc;
+  --bubbBack: #ff2d75;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0c192c;
+}
+
+.title-gallery {
+  color: var(--mainColor);
+}
+
+.nav-background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.heading {
+  background-color: #092635;
+}
+
+.art {
+  color: var(--textWhite);
+  padding-left: 50px;
+}
+
+.nav-item {
+  padding-right: 120px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--textWhite);
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+
+.nav-item span {
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+
+.nav-item :hover {
+  color: var(--mainColor);
+}
+
+/* section main hero */
+.home-logo {
+  border: 2px solid var(--textWhite);
+}
+
+.logo-icon {
+  width: 400px;
+  padding: 15px;
+}
+
+.flex-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--bubbles);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px #4fc3dc44,
+    0 0 20px var(--bubbles),
+    0 0 40px var(--bubbles);
+  animation: animate 15s linear infinite;
+  animation-duration: calc(300s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 0 0 20px #ff2d75, 0 0 40px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+.slo {
+  padding-top: 10px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  background-image:
+    linear-gradient(
+      -225deg,
+      #53438d 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.button-container {
+  padding-top: 50px;
+  margin-top: 20px;
+}
+
+.see-gallery {
+  color: var(--textWhite);
+  text-decoration: none;
+  border: 1px solid var(--mainColor);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: 0.5s ease-in;
+}
+
+.see-artists {
+  color: var(--textWhite);
+  text-decoration: none;
+  border: 1px solid var(--mainColor);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: 0.5s ease-in;
+}
+
+.button-container :hover {
+  color: var(--mainColor);
+  background-color: blueviolet;
+  transform: scale(0.7);
+}
+
+.home-title {
+  font-size: 2em;
+  color: var(--textWhite);
+  -webkit-text-fill-color: var(--textColor);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--bubbles);
+}

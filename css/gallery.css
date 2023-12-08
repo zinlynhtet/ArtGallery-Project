@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --mainColor: #ffb534;
+  --textColor: #092635;
+  --textWhite: #eef5ff;
+  --bubbles: #4fc3dc;
+  --bubbBack: #ff2d75;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0c192c;
+}
+
+.title-gallery {
+  color: var(--mainColor);
+}
+
+.nav-background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.heading {
+  background-color: #092635;
+}
+
+.art {
+  color: var(--textWhite);
+  padding-left: 50px;
+}
+
+.nav-item {
+  padding-right: 120px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--textWhite);
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+
+.nav-item span {
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+
+.nav-item :hover {
+  color: var(--mainColor);
+}
+
+.flex-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: var(--bubbles);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px #4fc3dc44,
+    0 0 20px var(--bubbles),
+    0 0 40px var(--bubbles);
+  animation: animate 15s linear infinite;
+  animation-duration: calc(300s / var(--i));
+}
+
+.bubbles span:nth-child(1) {
+  --i: 11;
+}
+
+.bubbles span:nth-child(2) {
+  --i: 12;
+}
+
+.bubbles span:nth-child(3) {
+  --i: 24;
+}
+
+.bubbles span:nth-child(4) {
+  --i: 10;
+}
+
+.bubbles span:nth-child(5) {
+  --i: 14;
+}
+
+.bubbles span:nth-child(6) {
+  --i: 23;
+}
+
+.bubbles span:nth-child(7) {
+  --i: 18;
+}
+
+.bubbles span:nth-child(8) {
+  --i: 16;
+}
+
+.bubbles span:nth-child(9) {
+  --i: 19;
+}
+
+.bubbles span:nth-child(10) {
+  --i: 20;
+}
+
+.bubbles span:nth-child(11) {
+  --i: 22;
+}
+
+.bubbles span:nth-child(12) {
+  --i: 25;
+}
+
+.bubbles span:nth-child(13) {
+  --i: 18;
+}
+
+.bubbles span:nth-child(14) {
+  --i: 21;
+}
+
+.bubbles span:nth-child(15) {
+  --i: 15;
+}
+
+.bubbles span:nth-child(16) {
+  --i: 13;
+}
+
+.bubbles span:nth-child(17) {
+  --i: 26;
+}
+
+.bubbles span:nth-child(18) {
+  --i: 17;
+}
+
+.bubbles span:nth-child(19) {
+  --i: 13;
+}
+
+.bubbles span:nth-child(20) {
+  --i: 28;
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 0 0 20px #ff2d75, 0 0 40px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+.mid-card img {
+  width: 100%;
+  height: 340px;
+  padding: 20px;
+}
+
+.text-card h3 {
+  font-size: 2em;
+  color: var(--bubbBack);
+}
+
+.button-detail {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.text-card a {
+  color: var(--textWhite);
+  text-decoration: none;
+  border: 1px solid var(--mainColor);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 0.5s ease-in;
+}
+
+.button-detail :hover {
+  color: var(--mainColor);
+  background-color: blueviolet;
+  transform: scale(0.7);
+}
+
+.text-card footer {
+  color: var(--mainColor);
+}
+
+.text-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 14px;
+}
+
+@media (max-width: 1245px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 840px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-container {
+    padding: 0;
+  }
+
+  .nav-item {
+    display: none;
+  }
+}
+
+.over-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  width: 400px;
+  height: 440px;
+  border: 1px solid red;
+  border-radius: 20px;
+  background: var(--textColor);
+}
+
+.over-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.details {
+  padding: 20px;
+  width: 300px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 380px;
+  overflow: scroll;
+  box-sizing: content-box;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  display: none;
+}
+
+.details a {
+  text-decoration: none;
+  color: var(--bubbBack);
+  font-size: 1.2em;
+}
+
+.over-card.flip .details {
+  display: block;
+}
