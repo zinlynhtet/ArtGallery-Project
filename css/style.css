@@ -91,9 +91,7 @@ body {
   background: var(--bubbles);
   margin: 0 4px;
   border-radius: 50%;
-  box-shadow:
-    0 0 0 10px #4fc3dc44,
-    0 0 20px var(--bubbles),
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 20px var(--bubbles),
     0 0 40px var(--bubbles);
   animation: animate 15s linear infinite;
   animation-duration: calc(300s / var(--i));
@@ -118,14 +116,13 @@ body {
   padding-top: 10px;
   font-size: 1.3em;
   text-transform: uppercase;
-  background-image:
-    linear-gradient(
-      -225deg,
-      #53438d 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
+  background-image: linear-gradient(
+    -225deg,
+    #53438d 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;

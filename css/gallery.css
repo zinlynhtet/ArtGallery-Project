@@ -79,9 +79,7 @@ body {
   background: var(--bubbles);
   margin: 0 4px;
   border-radius: 50%;
-  box-shadow:
-    0 0 0 10px #4fc3dc44,
-    0 0 20px var(--bubbles),
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 20px var(--bubbles),
     0 0 40px var(--bubbles);
   animation: animate 15s linear infinite;
   animation-duration: calc(300s / var(--i));
@@ -182,11 +180,12 @@ body {
   }
 }
 
-.mid-card img {
+/* .mid-card img {
   width: 100%;
   height: 340px;
   padding: 20px;
-}
+  border-radius: 5.4%;
+} */
 
 .text-card h3 {
   font-size: 2em;
