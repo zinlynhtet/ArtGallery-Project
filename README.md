@@ -11,6 +11,7 @@ This is a sample project. You can see the github workflows and linters altogethe
 - not available for mobile
 - Dynamic object is in used.
 - Implemeted with Html, Css and JavaScript
+- 16 hours coding practice
 
 
 - Deploy link  - https://ordinarymack.github.io/ArtGallery-Project/
